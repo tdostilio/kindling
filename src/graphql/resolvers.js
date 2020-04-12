@@ -25,7 +25,8 @@ module.exports = {
     },
   },
   Mutation: {
-    createPost: async (parent, { title, desc, author }) => {
+    createPost: async (parent, args = {}) => {
+      let { title, desc, author } = args
       let newPost
       try {
         newPost = await Post.createPost({ title, desc, author })

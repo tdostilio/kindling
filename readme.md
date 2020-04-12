@@ -4,7 +4,7 @@
 
 - Have Mongo installed and in a separate terminal run `mongod`.
 - Use `yarn run debug` to start the server in Development Mode.
-- (Optional) Attach the VSCode debugger using script "Attach Debugger" configuration.
+- (Optional) If using VS Code use the "Start Server" debug config
 - Navigate to `http://localhost:4000/` to execute queries and mutations.
 
 ### Setup for Production:
