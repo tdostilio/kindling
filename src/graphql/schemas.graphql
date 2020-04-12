@@ -1,0 +1,19 @@
+module.exports = `
+type Query {
+  posts: [Post!]!
+  post(id: String!): Post!
+}
+
+type Mutation {
+  createPost(title: String!, desc: String!, author: String!): Post!,
+  updatePost(id: String!, title: String, desc: String, author: String): Post!,
+}
+
+type Post {
+  id: String!
+  title: String!
+  desc: String!
+  author: String!
+  createdOn: String!
+  }
+`

@@ -1,0 +1,25 @@
+{
+  "name": "kindling",
+  "version": "0.0.0",
+  "description": "Starter backend application",
+  "main": "src/index.js",
+  "scripts": {
+    "debug": "nodemon --inspect src/index.js ",
+    "prod": "NODE_ENV=production node src/index.js"
+  },
+  "keywords": [
+    "gql",
+    "yoga",
+    "mongodb"
+  ],
+  "author": "Tom",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "graphql-yoga": "^1.14.4",
+    "mongoose": "^5.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
