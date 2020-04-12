@@ -4,8 +4,6 @@ const { startDB, models } = require('./db')
 const resolvers = require('./graphql/resolvers')
 const typeDefs = require('./graphql/schemas.graphql')
 
-let db
-
 if (process.env.NODE_ENV === 'production') {
   db = startDB({
     user: process.env.DB_USER,
@@ -33,5 +31,7 @@ const opts = {
 }
 
 Server.start(opts, () => {
-  console.log(`Server is running on http://localhost:${opts.port}`)
+  if (!process.env.NODE_ENV === 'production') {
+    console.log(`Server is running on http://localhost:${opts.port}`)
+  }
 })
