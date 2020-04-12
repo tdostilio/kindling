@@ -7,6 +7,7 @@ type Query {
 type Mutation {
   createPost(title: String!, desc: String!, author: String!): Post!,
   updatePost(id: String!, title: String, desc: String, author: String): Post!,
+  deletePost(id: String!): GenericResponse
 }
 
 type Post {
@@ -16,4 +17,9 @@ type Post {
   author: String!
   createdOn: String!
   }
+
+type GenericResponse {
+  success: Boolean!
+  message: String
+}
 `

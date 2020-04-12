@@ -51,5 +51,16 @@ module.exports = {
       }
       return post
     },
+    deletePost: async (parent, args = {}) => {
+      if (!args.id) {
+        throw new Error(`Id is required arg`)
+      }
+      try {
+        await Post.findByIdAndDelete(ObjectId(args.id))
+      } catch (err) {
+        throw err
+      }
+      return { success: true, message: `Deleted post ${args.id}` }
+    },
   },
 }
